@@ -20,6 +20,28 @@ function updateTime() {
   seoulTimeElement.innerHTML = seoulTime.format(
     "h:mm:ss [<small>]SS[</small>] [<small>]A[</small>]"
   );
+
+  let warsawElement = document.querySelector("#warsaw");
+
+  let warsawDateElement = warsawElement.querySelector(".date");
+  let warsawTimeElement = warsawElement.querySelector(".time");
+  let warsawTime = moment().tz("Europe/Warsaw");
+
+  warsawDateElement.innerHTML = warsawTime.format("MMMM Do YYYY");
+  warsawTimeElement.innerHTML = warsawTime.format(
+    "h:mm:ss [<small>]SS[</small>] [<small>]A[</small>]"
+  );
+
+  let vancouverElement = document.querySelector("#vancouver");
+
+  let vancouverDateElement = vancouverElement.querySelector(".date");
+  let vancouverTimeElement =vancouverElement.querySelector(".time");
+  let vancouverTime = moment().tz("America/vancouver");
+
+  vancouverDateElement.innerHTML = vancouverTime.format("MMMM Do YYYY");
+  vancouverTimeElement.innerHTML = vancouverTime.format(
+    "h:mm:ss [<small>]SS[</small>] [<small>]A[</small>]"
+  );
 }
 
 function updateCity(event) {
@@ -42,6 +64,7 @@ if (cityTimeZone === 'current') {
     "A"
   )}</small></div>
   </div>
+  <a href="index.html">⬅️</a>
   `;
 
 }
