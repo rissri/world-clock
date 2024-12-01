@@ -32,14 +32,14 @@ function updateTime() {
     "h:mm:ss [<small>]SS[</small>] [<small>]A[</small>]"
   );
 
-  let vancouverElement = document.querySelector("#vancouver");
+  let athensElement = document.querySelector("#athens");
 
-  let vancouverDateElement = vancouverElement.querySelector(".date");
-  let vancouverTimeElement =vancouverElement.querySelector(".time");
-  let vancouverTime = moment().tz("America/vancouver");
+  let athensDateElement = athensElement.querySelector(".date");
+  let athensTimeElement = athensElement.querySelector(".time");
+  let athensTime = moment().tz("Europe/Athens");
 
-  vancouverDateElement.innerHTML = vancouverTime.format("MMMM Do YYYY");
-  vancouverTimeElement.innerHTML = vancouverTime.format(
+  athensDateElement.innerHTML = athensTime.format("MMMM Do YYYY");
+  athensTimeElement.innerHTML = athensTime.format(
     "h:mm:ss [<small>]SS[</small>] [<small>]A[</small>]"
   );
 }
